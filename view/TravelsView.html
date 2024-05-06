@@ -26,7 +26,7 @@
         </div>
         <div class="formTravel">
             <form id="travelsForm" required title="Please select a country">
-                <div>
+                <div class="formContainer">
                     <select name="country" id="selectCountry">
                         <option value="" disabled selected>Select a country</option>
                         <option value="Argentina">Argentina</option>
@@ -40,10 +40,13 @@
             </form>
         </div>
         <div class="ShowInfo">
+            <div id="errorMessage"></div>
             <div id="showDescription" class="showDescription"></div>
             <button type="button" id="chooseButton">Choose</button>
             <h2 id="titleSelectedCountry">Selected Countries:</h2>
-            <ul id="selectedCountries"></ul>
+            <div class="selectedContainer">
+                <ul id="selectedCountries"></ul>
+            </div>
         </div>
     </section>
 

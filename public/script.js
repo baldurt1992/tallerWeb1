@@ -12,14 +12,19 @@ const btnTravels = document.getElementById("btnTravels");
 const selectCurrency = document.getElementById("selectCurrency");
 const btnConvertCurrency = document.getElementById("btnConvertCurrency");
 const titleCurrency = document.getElementById("titleCurrency");
-const Result = document.getElementById("Result");
-
-let countChanges = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
   if (btnTravels) {
     btnTravels.addEventListener("click", () => {
       window.location.href = "view/TravelsView.html";
+    });
+  }
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (btnTravels) {
+    btnCurrencies.addEventListener("click", () => {
+      window.location.href = "view/CurrencyConverter.html";
     });
   }
 });
@@ -30,12 +35,12 @@ window.addEventListener("DOMContentLoaded", () => {
   if (selectCurrency) {
     selectCurrency.addEventListener("change", () => {
       const selectedCurrency = selectCurrency.value;
+      selectCurrency.style.color = "#FFA500"
 
       showExchange(selectedCurrency, currencies);
 
-      if (countChanges > 1) {
-        clearInterface(false, "currencyCount");
-      }
+      clearInterface(true, "currencyCount", "titleCurrency", "result", "numberResult", "ConversionTextInfo", 
+      "conversionHistory");
     });
   }
 
@@ -48,34 +53,37 @@ window.addEventListener("DOMContentLoaded", () => {
       const amount = parseInt(currencyCountInput.value);
       const errorMessage = document.getElementById("errorMessage");
       const conversionHistory = document.getElementById("conversionHistory");
-
-      clearInterface(false, currencyCountInput);
-
+            
       showErrorMessage(errorMessage, amount);
-
+      
       errorMessage.style.color = "#8E000C";
       errorMessage.style.fontWeight = "700";
       errorMessage.style.marginBottom = "10px";
-
+      
       showConversionResult(amount, selectedCurrencyValue, amount);
+      const resultList = document.getElementById('result');
 
       const listItem = document.createElement("li");
       let resultLi = document.createElement("li");
-
+      
       resultLi.style.color = "#FFA500";
       resultLi.style.fontSize = "16px";
-
+      resultLi.style.textAlign = "left";
+        
       showInfoConversion(
         titleCurrency,
         selectedCurrencyValue,
         listItem,
         resultLi,
-        Result,
+        resultList,
         amount,
         conversionHistory,
         numberResult
       );
 
+      currencyCountInput.value = ""; 
+
+      
       titleCurrency.style.whiteSpace = "pre-line";
       titleCurrency.style.fontSize = "20px";
       titleCurrency.style.margin = "0";

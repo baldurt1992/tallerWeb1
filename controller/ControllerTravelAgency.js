@@ -12,6 +12,10 @@ function showInfo(descriptionContainerId) {
     if (selectCountry) {
       selectCountry.addEventListener("change", () => {
         const selectedCountry = selectCountry.value;
+        const errorMessage = document.getElementById("errorMessage");
+
+        errorMessage.innerHTML = "";
+
 
         if (selectedCountry) {
           const selectedCountryDescription =
@@ -30,7 +34,21 @@ function showInfo(descriptionContainerId) {
       chooseButton.addEventListener("click", () => {
         const selectedCountry = selectCountry.value;
         const peopleCount = parseInt(peopleCountInput.value);
+        const errorMessage = document.getElementById("errorMessage");
 
+        peopleCountInput.value = "";
+        
+        errorMessage.style.color = "#8E000C"; 
+        errorMessage.style.fontWeight = "700";
+        errorMessage.style.marginBottom = "10px";
+        
+        if (!peopleCount) {
+          errorMessage.textContent = "Please enter the number of people";
+          return;
+        } else {
+          errorMessage.textContent = "";
+        }
+        
         if (selectedCountry && peopleCount > 0) {
           const listItem = document.createElement("li");
 

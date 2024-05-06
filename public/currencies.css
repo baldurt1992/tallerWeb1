@@ -30,7 +30,7 @@ body {
     transition: border 0.5s ease;
     height: 90vh;
     max-height: 100vh;
-    width: 30%;
+    width: 550px;
 }
 
 .wrapper:hover {
@@ -138,6 +138,7 @@ input {
 
 .formTravel input {
     width: 45%;
+    color: #FFA500;
 }
 
 select option:checked {
@@ -212,6 +213,7 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     gap: 8px;
     padding: 0;
+    align-items: center;
 }
 
 .showExchangeRate {
@@ -227,11 +229,6 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #FFA500;
 }
 
-ul {
-    list-style-type: decimal;
-
-}
-
 .resultContainer {
     flex-grow: 2;
     max-height: 40vh;
@@ -239,6 +236,10 @@ ul {
     width: 400px;
     height: 30vh;
     margin: 2%;
+}
+
+.resultContainer ul {
+    list-style-type: decimal !important;
 }
 
 .resultContainer::-webkit-scrollbar {
