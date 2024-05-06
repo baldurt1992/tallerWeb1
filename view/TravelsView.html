@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/travels.css">
+    <title>Travels</title>
+</head>
+
+<body>
+    <section class="wrapper">
+
+        <div class="backToHome">
+            <a href="/index.html">
+                <p>Home</p>
+            </a>
+        </div>
+
+        <div class="title">
+            <h1>Travels</h1>
+            <span>Hub</span>
+        </div>
+        <div class="SelectOption">
+            <h2>Please select a destination</h2>
+        </div>
+        <div class="formTravel">
+            <form id="travelsForm" required title="Please select a country">
+                <div>
+                    <select name="country" id="selectCountry">
+                        <option value="" disabled selected>Select a country</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Ecuador">Ecuador</option>
+                    </select>
+                    <input type="number" id="peopleCount" placeholder="Number of people">
+                </div>
+            </form>
+        </div>
+        <div class="ShowInfo">
+            <div id="showDescription" class="showDescription"></div>
+            <button type="button" id="chooseButton">Choose</button>
+            <h2 id="titleSelectedCountry">Selected Countries:</h2>
+            <ul id="selectedCountries"></ul>
+        </div>
+    </section>
+
+    <script type="module" src="/public/script.js"></script>
+</body>
+
+</html>

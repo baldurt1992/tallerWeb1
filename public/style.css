@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFA500;
+    border-radius: 5px;
+    padding: 3%;
+    transition: border 0.5s ease;
+}
+
+.wrapper:hover {
+    border: 2px solid rgb(71, 221, 171);
+}
+
+.wrapper h1,
+span {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(255, 200, 21);
+    height: 10px;
+}
+
+.wrapper h1 {
+    text-shadow: rgba(255, 162, 0, 0.9) 0px 0px 19px;
+    transition: color 0.3s ease, text-shadow 0.5s ease;
+}
+
+.wrapper span {
+    display: inline-block;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(71, 221, 171);
+    font-size: 50px;
+    transform: rotate(-8deg);
+    transform-origin: top right;
+    margin-top: 2%;
+    transition: color 0.5s ease;
+}
+
+.SelectOption {
+    margin-top: 8%;
+    color: #8f5d01;
+    transition: color 0.5s ease;
+}
+
+.wrapper:hover .SelectOption {
+    color: #FFA500;
+}
+
+.wrapper:hover span {
+    color: #FFA500;
+}
+
+.wrapper:hover h1 {
+    text-shadow: rgb(71, 221, 171) 0px 0px 19px;
+    color: rgb(71, 221, 171);
+
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    margin-top: 5%;
+}
+
+.btns>div>button {
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #FFA500;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.5s ease,
+        transform 0.3s ease;
+    transform: translateY(0);
+}
+
+.btns button:hover {
+    background-color: rgb(71, 221, 171);
+    transform: translateY(-3px);
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+}

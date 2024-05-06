@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFA500;
+    border-radius: 5px;
+    padding: 3%;
+    transition: border 0.5s ease;
+}
+
+.wrapper:hover {
+    border: 2px solid rgb(71, 221, 171);
+}
+
+.backToHome {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin: 0;
+    color: #FFA500;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.backToHome a {
+    text-decoration: none;
+    color: #FFA500;
+    transition: color 0.5s ease;
+}
+
+.backToHome a:hover {
+    color: rgb(71, 221, 171);
+}
+
+.wrapper h1,
+span {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(255, 200, 21);
+    height: auto;
+}
+
+.wrapper h1 {
+    text-shadow: rgba(255, 162, 0, 0.9) 0px 0px 19px;
+    transition: color 0.3s ease, text-shadow 0.5s ease;
+}
+
+.wrapper span {
+    display: inline-block;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(71, 221, 171);
+    font-size: 50px;
+    transform: rotate(-8deg);
+    transform-origin: top right;
+    transition: color 0.5s ease;
+}
+
+.title {
+    display: flex;
+    gap: 5px;
+}
+
+.SelectOption {
+    color: #8f5d01;
+    transition: color 0.5s ease;
+    margin-bottom: 5%;
+}
+
+.wrapper:hover .SelectOption {
+    color: #FFA500;
+}
+
+.wrapper:hover span {
+    color: #FFA500;
+}
+
+.wrapper:hover h1 {
+    text-shadow: rgb(71, 221, 171) 0px 0px 19px;
+    color: rgb(71, 221, 171);
+
+}
+
+form .title {
+    display: flex;
+    gap: 10px;
+}
+
+.formTravel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formTravel select,
+input {
+    border: none;
+    border-bottom: 2px solid #FFA500;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    color: #8f5d01;
+    background-color: #ffffff00;
+    font-size: 16px;
+    font-weight: 600;
+    transition: border 0.5s ease;
+}
+
+.formTravel input {
+    width: 45%;
+}
+
+select option:checked {
+    color: #FFA500;
+}
+
+option {
+    background-color: #1a1a1a;
+}
+
+::placeholder {
+    color: #8f5d01;
+    text-align: center;
+}
+
+.wrapper:hover input {
+    border-bottom: 2px solid rgb(71, 221, 171);
+}
+
+.wrapper:hover select {
+    border-bottom: 2px solid rgb(71, 221, 171);
+}
+
+.ShowInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    color: rgb(71, 221, 171);
+}
+
+.ShowInfo button {
+    margin-top: 8%;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #FFA500;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.5s ease,
+        transform 0.3s ease;
+    transform: translateY(0);
+}
+
+.ShowInfo button:hover {
+    background-color: rgb(71, 221, 171);
+    transform: translateY(-3px);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.ShowInfo ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+}
+
+.showDescription {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    width: 70%;
+    transition: color 0.5s ease;
+    margin-bottom: 4%;
+}
+
+.wrapper:hover .showDescription {
+    color: #FFA500;
+}
