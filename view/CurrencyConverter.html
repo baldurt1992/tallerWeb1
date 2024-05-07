@@ -10,49 +10,51 @@
 
 <body>
     <section class="wrapper">
+        <div class="generalContainer">
+            <div class="backToHome">
+                <a href="/index.html">
+                    <p>Home</p>
+                </a>
+            </div>
 
-        <div class="backToHome">
-            <a href="/index.html">
-                <p>Home</p>
-            </a>
-        </div>
-
-        <div class="title">
-            <h1>Currencies</h1>
-            <span>Hub</span>
-        </div>
-        <div class="SelectOption">
-            <h2>Please select a currency</h2>
-        </div>
-        <div class="formTravel">
-            <form id="currencyForm" required title="Please select a currency">
-                <div class="formContainer">
-                    <select name="currency" id="selectCurrency">
-                        <option value="" disabled selected>Select a currency</option>
-                        <option value="EUR">Euro</option>
-                        <option value="USD">United States Dollar</option>
-                        <option value="GBP">British Pound Sterling</option>
-                          <option value="JPY">Japanese Yen</option>
-                    </select>
-                    <input type="number" id="currencyCount" placeholder="Enter amount" title="Please enter amount">
+            <div class="title">
+                <h1>Currencies</h1>
+                <span>Hub</span>
+            </div>
+            <div class="SelectOption">
+                <h2>Please select a currency</h2>
+            </div>
+            <div class="formTravel">
+                <form id="currencyForm" required title="Please select a currency">
+                    <div class="formContainer">
+                        <select name="currency" id="selectCurrency">
+                            <option value="" disabled selected>Select a currency</option>
+                            <option value="EUR">Euro</option>
+                            <option value="USD">United States Dollar</option>
+                            <option value="GBP">British Pound Sterling</option>
+                            <option value="JPY">Japanese Yen</option>
+                        </select>
+                        <input type="number" id="currencyCount" placeholder="Enter amount" title="Please enter amount">
+                    </div>
+                </form>
+            </div>
+            <div class="ShowInfo">
+                <div id="errorMessage"></div>
+                <div id="showInfoCurrency" class="showExchangeRate"></div>
+                <button type="button" id="btnConvertCurrency">Convert</button>
+                <ul id="ConversionTextInfo"></ul>
+                <div id="textResults">
+                    <h2 id="titleCurrency">
+                    </h2>
+                    <h3 id="numberResult"></h3>
                 </div>
-            </form>
-        </div>
-        <div class="ShowInfo">
-            <div id="errorMessage"></div>
-            <div id="showInfoCurrency" class="showExchangeRate"></div>
-            <button type="button" id="btnConvertCurrency">Convert</button>
-            <ul id="ConversionTextInfo"></ul>
-            <div id="textResults">
-                <h2 id="titleCurrency">
-                </h2>
-                <h3 id="numberResult"></h3>
-            </div>
-            <div class="resultContainer">
-                <p id="conversionHistory"></p>
-                <ul id="result"></ul>
+                <div class="resultContainer">
+                    <p id="conversionHistory"></p>
+                    <ul id="result"></ul>
+                </div>
             </div>
         </div>
+
     </section>
 
     <script type="module" src="/public/script.js"></script>

@@ -14,8 +14,9 @@ function showInfo(descriptionContainerId) {
         const selectedCountry = selectCountry.value;
         const errorMessage = document.getElementById("errorMessage");
 
-        errorMessage.innerHTML = "";
+        selectCountry.style.color = "#FFA500";
 
+        errorMessage.innerHTML = "";
 
         if (selectedCountry) {
           const selectedCountryDescription =
@@ -37,18 +38,18 @@ function showInfo(descriptionContainerId) {
         const errorMessage = document.getElementById("errorMessage");
 
         peopleCountInput.value = "";
-        
-        errorMessage.style.color = "#8E000C"; 
+
+        errorMessage.style.color = "#8E000C";
         errorMessage.style.fontWeight = "700";
         errorMessage.style.marginBottom = "10px";
-        
+
         if (!peopleCount) {
           errorMessage.textContent = "Please enter the number of people";
           return;
         } else {
           errorMessage.textContent = "";
         }
-        
+
         if (selectedCountry && peopleCount > 0) {
           const listItem = document.createElement("li");
 

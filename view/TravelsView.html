@@ -10,34 +10,35 @@
 
 <body>
     <section class="wrapper">
+        <div class="generalContainer">
+            <div class="backToHome">
+                <a href="/index.html">
+                    <p>Home</p>
+                </a>
+            </div>
 
-        <div class="backToHome">
-            <a href="/index.html">
-                <p>Home</p>
-            </a>
-        </div>
-
-        <div class="title">
-            <h1>Travels</h1>
-            <span>Hub</span>
-        </div>
-        <div class="SelectOption">
-            <h2>Please select a destination</h2>
-        </div>
-        <div class="formTravel">
-            <form id="travelsForm" required title="Please select a country">
-                <div class="formContainer">
-                    <select name="country" id="selectCountry">
-                        <option value="" disabled selected>Select a country</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Spain">Spain</option>
-                        <option value="Ecuador">Ecuador</option>
-                    </select>
-                    <input type="number" id="peopleCount" placeholder="Number of people">
-                </div>
-            </form>
+            <div class="title">
+                <h1>Travels</h1>
+                <span>Hub</span>
+            </div>
+            <div class="SelectOption">
+                <h2>Please select a destination</h2>
+            </div>
+            <div class="formTravel">
+                <form id="travelsForm" required title="Please select a country">
+                    <div class="formContainer">
+                        <select name="country" id="selectCountry">
+                            <option value="" disabled selected>Select a country</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Ecuador">Ecuador</option>
+                        </select>
+                        <input type="number" id="peopleCount" placeholder="Number of people">
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="ShowInfo">
             <div id="errorMessage"></div>
